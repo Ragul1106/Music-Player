@@ -1,27 +1,31 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
+import Theethiriyaai from '../assets/audios/Theethiriyaai.mp3'
+import UnmaiKadhalYaarEndral from '../assets/audios/Unmai Kadhal Yaar Endral.mp3'
+import Uyirey from '../assets/audios/Uyirey.mp3'
+
 const playlist = [
   {
     id: 1,
-    title: 'Lofi Chill Beats',
-    artist: 'Lofi Artist',
-    url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
-    img: 'https://placehold.co/80x80?text=Lofi'
+    title: 'Theethiriyaai',
+    artist: 'Sid Sriram',
+    url: Theethiriyaai,
+    img: 'https://placehold.co/80x80?text=Brahmastra'
   },
   {
     id: 2,
-    title: 'Electronic Vibes',
-    artist: 'Electro Star',
-    url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-    img: 'https://placehold.co/80x80?text=Electro'
+    title: 'Unmai Kadhal Yaar Endral',
+    artist: 'Sweta Mohan',
+    url: UnmaiKadhalYaarEndral,
+    img: 'https://placehold.co/80x80?text=I'
   },
   {
     id: 3,
-    title: 'Ambient Relaxation',
-    artist: 'Ambient Soul',
-    url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
-    img: 'https://placehold.co/80x80?text=Ambient'
+    title: 'Uyirey Bgm',
+    artist: 'Ramya Abhyankar',
+    url: Uyirey,
+    img: 'https://placehold.co/80x80?text=Amaran'
   },
 ];
 
