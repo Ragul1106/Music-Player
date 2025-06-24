@@ -23,7 +23,7 @@ const playlist = [
   {
     id: 3,
     title: 'Uyirey Bgm',
-    artist: 'Ramya Abhyankar',
+    artist: 'G.V. Prakash',
     url: Uyirey,
     img: 'https://placehold.co/80x80?text=Amaran'
   },
