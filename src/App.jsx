@@ -15,28 +15,7 @@ import MovieSearch from './pages/MovieSearch';
 import AuthForm from './pages/AuthForm';
 import ProductCatalog from './pages/ProductCatalog';
 import MusicPlayer from './pages/MusicPlayer';
-
-const Navbar = () => (
-  <nav className="navbar navbar-expand-lg p-4 navbar-dark bg-primary fixed-top">
-    <div className="container">
-      <Link className="navbar-brand" to="/">Mini Projects</Link>
-      <div className="collapse navbar-collapse">
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item"><Link className="nav-link" to="/currency">Currency</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/stopwatch">Stopwatch</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/markdown">Markdown</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/grocery">Grocery</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/expense">Expense</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/blog">Blog</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/movies">Movies</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/auth">Auth</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/products">Products</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/music">Music</Link></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-);
+import Navbar from './pages/Navbar';
 
 function App() {
   return (
