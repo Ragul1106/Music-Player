@@ -106,11 +106,11 @@ const MusicPlayer = () => {
             ? { scale: [1, 1.02, 1], rotate: [0, 1.5, -1.5, 0] }
             : { scale: 1, rotate: 0 }
         }
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+        transition={
+          isPlaying
+            ? { duration: 2, repeat: Infinity, ease: 'easeInOut' }
+            : { duration: 0.3 }
+        }
         style={{
           boxShadow: isPlaying
             ? '0 0 20px rgba(255, 0, 150, 0.4)'
@@ -121,23 +121,22 @@ const MusicPlayer = () => {
           overflow: 'hidden',
         }}
       >
+
         <div className="card-body text-center">
           <motion.img
+            key={isPlaying ? 'playing' : 'paused'}
             src={current.img}
             alt={current.title}
             className="rounded-circle mb-3"
             style={{ width: '80px', height: '80px', objectFit: 'cover' }}
-            animate={
+            animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
+            transition={
               isPlaying
-                ? { rotate: 360 }
-                : { rotate: 0 }
+                ? { duration: 6, repeat: Infinity, ease: 'linear' }
+                : { duration: 0.5 }
             }
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
           />
+
 
           <h5 className="card-title">{current.title}</h5>
           <p className="card-text">{current.artist}</p>
@@ -173,9 +172,8 @@ const MusicPlayer = () => {
         {playlist.map((track, index) => (
           <li
             key={track.id}
-            className={`list-group-item d-flex justify-content-between align-items-center ${
-              index === currentIndex ? 'active text-white' : ''
-            }`}
+            className={`list-group-item d-flex justify-content-between align-items-center ${index === currentIndex ? 'active text-white' : ''
+              }`}
             onClick={() => handleSelectTrack(index)}
             style={{ cursor: 'pointer' }}
           >
