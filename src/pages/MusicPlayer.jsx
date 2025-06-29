@@ -147,14 +147,14 @@ const MusicPlayer = () => {
           <p className="card-text">{current.artist}</p>
 
           <div className="d-flex justify-content-center gap-3 mb-2">
-            <button className="btn btn-outline-secondary rounded-circle" onClick={() => setShuffle(!shuffle)} title="Shuffle">
-              <FaRandom color={shuffle ? 'blue' : 'gray'} />
+            <button className="btn rounded-circle" onClick={() => setShuffle(!shuffle)} title="Shuffle">
+              <FaRandom color={shuffle ? 'darkred' : 'gray'} />
             </button>
-            <button className="btn btn-outline-secondary rounded-circle" onClick={handlePrev}><FaStepBackward /></button>
+            <button className="btn rounded-circle" onClick={handlePrev}><FaStepBackward /></button>
             <button className={`btn ${isPlaying ? 'btn-danger' : 'btn-success'} rounded-circle`} onClick={handlePlayPause} style={{ width: '50px', height: '50px' }}>{isPlaying ? <FaPause /> : <FaPlay />}</button>
-            <button className="btn btn-outline-secondary rounded-circle" onClick={handleNext}><FaStepForward /></button>
-            <button className="btn btn-outline-secondary rounded-circle" onClick={() => setRepeat(!repeat)} title="Repeat">
-              <FaRedo color={repeat ? 'blue' : 'gray'} />
+            <button className="btn rounded-circle" onClick={handleNext}><FaStepForward /></button>
+            <button className="btn rounded-circle" onClick={() => setRepeat(!repeat)} title="Repeat">
+              <FaRedo color={repeat ? 'darkred' : 'gray'} />
             </button>
           </div>
 
