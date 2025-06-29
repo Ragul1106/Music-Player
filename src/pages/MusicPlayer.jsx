@@ -146,7 +146,7 @@ const MusicPlayer = () => {
           <h5 className="card-title">{current.title}</h5>
           <p className="card-text">{current.artist}</p>
 
-          <div className="d-flex justify-content-center gap-3 mb-2">
+          <div className="d-flex justify-content-center gap-2 mb-2">
             <button className="btn rounded-circle" onClick={() => setShuffle(!shuffle)} title="Shuffle">
               <FaRandom color={shuffle ? 'darkred' : 'gray'} />
             </button>
